@@ -1,0 +1,34 @@
+/* body {
+  background-image: url('/src/assets/images/bg_msrp.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+} */
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.bg-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.bg-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/src/assets/images/bg_msrp_3.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: blur(2px); /* Adjust the blur level as needed */
+  z-index: -1; /* Ensure the background is behind the content */
+}
